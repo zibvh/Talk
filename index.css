@@ -86,7 +86,7 @@ main .intro img{
 main .intro input{
     outline: none;
     background: none;
-    color: rgb(0, 0, 8);
+    color: white;
     border: 1px solid white;
     border-radius: 20px;
     width: 120px;
@@ -111,6 +111,7 @@ main .intro .setname button:hover{
 }
 main .text{
     border: 1px solid rgb(0, 0, 8);
+    color: white;
     padding: 20px 6px;
     display: none;
     flex-direction: column;
@@ -129,7 +130,7 @@ main .text input{
     outline: none;
     padding: 1px 5px;
     background: none;
-    color: rgb(0, 0, 8);
+    color: white;
     border: 1px solid  rgb(0, 0, 8);
     border-radius: 10px;
     width: min(120px, 100%);
@@ -138,7 +139,7 @@ main .text input{
 }
 main .text textarea{
     background: none;
-    color: rgb(0, 0, 8);
+    color: white;
     border: 1px solid  rgb(0, 0, 8);
     border-radius: 20px;
     box-sizing: border-box;
@@ -149,7 +150,7 @@ main .text textarea{
 }
 main .text #helpcategory{
     background: none;
-    color: rgb(0, 0, 8);
+    color: white;
     border: 1px solid  rgb(0, 0, 8);
     border-radius: 20px;
     width: 120px;
@@ -157,6 +158,9 @@ main .text #helpcategory{
     outline: none;
     margin: 20px;
     padding: 2px 8px;
+}
+main .text #helpcategory option{
+    background-color: rgb(0, 0, 8);
 }
 main .form{
     display: flex;
