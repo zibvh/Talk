@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(0, 0, 8);
+    color: whitesmoke;
+}
+nav{
+    display: none;
+}
+header{
+    z-index: 800;
+    position: sticky;
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* background-color: rgb(32, 4, 4); */
+    height: 50px;
+    gap: 20px;
+}
+header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 25%;
+}
+header span{
+    font-size: 1.3rem;
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.ads{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ads h2{
+    animation: place 2s ease-in-out infinite forwards;
+}
+@keyframes place {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+main{
+    background: url(/images/Background.jpg) white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px 25px;
+    border-radius: 20px;
+    padding: 5px;
+    color: rgb(0, 0, 8);
+    height: fit-content;
+}
+main .intro{
+    background-color: rgb(0, 0, 8);
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: white;
+    height: fit-content;
+}
+main .intro h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+main .intro p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main .intro img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+main .intro input{
+    outline: none;
+    background: none;
+    color: rgb(0, 0, 8);
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 120px;
+    height: 30px;
+    margin: 20px;
+    padding: 2px 8px;
+}
+main .intro .setname button{
+    width: 80px;
+    height: 30px;
+    padding: 1px 8px;
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    border: 1px solid white;
+    color: white;
+}
+main .intro .setname button:hover{
+    background: white;
+    color: rgb(0, 0, 8);
+    transition: 1.81s ease-in-out linear;
+}
+main .text{
+    border: 1px solid rgb(0, 0, 8);
+    padding: 20px 6px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px 20px 0 0 ;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    justify-content: center;
+    font-family: "Bpmf Huninn", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+main .text input{
+    outline: none;
+    padding: 1px 5px;
+    background: none;
+    color: rgb(0, 0, 8);
+    border: 1px solid  rgb(0, 0, 8);
+    border-radius: 10px;
+    width: min(120px, 100%);
+    height: 30px;
+    margin: 8px 0;
+}
+main .text textarea{
+    background: none;
+    color: rgb(0, 0, 8);
+    border: 1px solid  rgb(0, 0, 8);
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: min(120px, 100%);
+    height: 30px;
+    margin: 8px 0;
+    padding: 2px 8px;
+}
+main .text #helpcategory{
+    background: none;
+    color: rgb(0, 0, 8);
+    border: 1px solid  rgb(0, 0, 8);
+    border-radius: 20px;
+    width: 120px;
+    height: 30px;
+    outline: none;
+    margin: 20px;
+    padding: 2px 8px;
+}
+main .form{
+    display: flex;
+    flex-direction: column;
+}
+main .form .help{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+main .form p{
+    background-color: rgb(0, 0, 8);
+    color: white;
+    padding: 1px 4px;
+    width: fit-content;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+main .form .send button{
+    text-align: center;
+    width: 80px;
+    height: 20px;
+    border: solid 0.2px rgb(0, 0, 8);
+}
