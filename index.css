@@ -83,15 +83,22 @@ main .intro img{
     object-fit: cover;
     border-radius: 4px;
 }
+main .intro .setname{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
 main .intro input{
     outline: none;
     background: none;
     color: white;
     border: 1px solid white;
     border-radius: 20px;
-    width: 120px;
+    flex: 1;
+    min-width: 0;
     height: 30px;
-    margin: 20px;
+    margin: 20px 0;
     padding: 2px 8px;
 }
 .inputblock{
@@ -99,20 +106,60 @@ main .intro input{
     align-items: center;
     gap: 15px;
 }
-main .intro .setname button{
-    width: 80px;
-    height: 30px;
-    padding: 1px 8px;
-    border-radius: 5px;
-    outline: none;
-    background: none;
-    border: 1px solid white;
-    color: white;
+button{
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 40px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 20px;
+    background: #0c0c0c;
+    cursor: pointer;
 }
-main .intro .setname button:hover{
-    background: white;
-    color: rgb(0, 0, 8);
-    transition: 1.81s ease-in-out linear;
+button span{
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+button .liquid{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: .5s;
+    pointer-events: none;
+}
+button .liquid::after,
+button .liquid::before{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #000;
+}
+button .liquid::before{
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+}
+button .liquid::after{
+    border-radius: 40%;
+    background: rgba(20, 20, 20, .5);
+    animation: animate 10s linear infinite;
+}
+button:hover .liquid{
+    top: -75px;
 }
 main .text{
     border: 1px solid rgb(0, 0, 8);
@@ -186,15 +233,6 @@ main .form p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 main .form .send button{
-    text-align: center;
-    background: none;
-    color: white;
-    border-radius: 20px;
-    width: 120px;
-    height: 40px;
-    outline: none;
     margin: 20px;
-    padding: 8px;
-    border: solid 0.2px rgb(0, 0, 8);
 }
 
