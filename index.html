@@ -6,10 +6,18 @@
     <title>Talk!</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bpmf+Huninn&family=Capriola&family=Henny+Penny&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bpmf+Huninn&family=Capriola&family=Henny+Penny&display=swap" rel="stylesheet">
 </head>
 <body>
+    <section class="alert" id="alert" role="alert" aria-live="polite">
+        <h4 id="errtitle"></h4>
+        <p id="errbody"></p>
+        <button id="close-alert" type="button">
+            <span>Okay</span>
+            <div class="liquid"></div>
+        </button>
+    </section>
     <nav>
         <ul>
             <li>about Talk!</li>
@@ -19,14 +27,18 @@
         <img src="/images/logo.png" alt="">
         <span>Talk!</span>
         <em id="namee" >You set your alias as </em>
+                    <em class="link">
+<p id="link-to-feed" class="navlink" style=" display: none; text-align: center; font-size: 0.8rem; cursor: pointer;">Go to feed</p>
+<p id="link-to-post" class="navlink" style="background-color: none;text-align: center; font-size: 0.8rem; cursor: pointer;">Make a Post</p>
+                    </em>
     </header>
-    <main>
+    <main style="display: none;" id="main">
 
         <div class="form">
 
             <div class="intro">
                 <h1>Hi there, what do i call you?</h1>
-                <p>An alias that is seen by only you. Nothing gets to the officers, your data is safe</p>
+                <p>An alias, not your <em>REAL NAME</em>, your data is safe</p>
                 <div class="setname">
                     <input type="text" placeholder="Enter an alias..." name="username" id="username">
                     <button id="setname" type="button">
@@ -39,25 +51,21 @@
 
             <div class="text">
             <div class="inputblock">
-                <label for="Title">Title:</label>
-                <input id="title" type="text">
-            </div>
-            <div class="inputblock">
                 <label for="body">Body:</label>
                 <textarea name="body" id="body"></textarea>
             </div>
-            <div class="inputblock">
+            <!-- <div class="inputblock">
                 <label for="category">Select Category: </label>
                 <select name="helpcategory" id="helpcategory">
                     <option value="enquiry">Enquiry</option>
                     <option value="report">Report</option>
                     <option value="suggestion">Suggestion</option>
                 </select>
-            </div>
-            <div class="inputblock">
+            </div> -->
+            <!-- <div class="inputblock">
                 <label for="helpfrom">"Send this message to..."</label>
                 <div class="helpfrom" id="helpfrom"></div>
-            </div>
+            </div> -->
             <span class="send">
                 <button id="sendhelpmessage" type="button">
                     <span>Send</span>
@@ -66,19 +74,31 @@
             </span>
 
         </div>
+
             
             <div class="help">
-                <p>Input your Enquiry, Report or Suggestion.</p>
-                <p>Choose a Category and who you want it to Reach.</p>
+                <p>Got anything on your mind? <em>TALK!</em></p>
+                <p><em>TALK!</em> about anything</p>
                 <p>Add media if necessary.</p>
                 <p>Hit SEND.</p>
                 <p>Your Identity is safe. Your data is safe. hehehe</p>
             </div>
         </div>
     </main>
-    <div class="ads">
+    <div style="display: none;" class="ads">
         <h2>this space is for ads</h2>
     </div>
+
+    <!-- THIS IS THE START OF FEED SECTION -->
+
+        <section id="feed" class="feed">
+            
+
+    </section>
+
+    <!-- THIS IS THE END OF FEED SECTION -->
+
+
     <script src="/index.js"></script>
 </body>
 </html>

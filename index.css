@@ -236,3 +236,316 @@ main .form .send button{
     margin: 20px;
 }
 
+.feed{
+    height: 100vh;
+    width: 100vw;
+    padding: 0 5px;
+}
+.feed-page{
+    background-color: black;
+}
+.feed .post-layout{
+    border-bottom: 0.01px solid rgba(255, 255, 255, 0.24);
+    width: 100%;
+    height: fit-content;
+    max-height: 50px;
+    font-family: Capriola;
+    padding: 5px 5px;
+    display: flex;
+    gap: 5px;
+}
+.feed .post-layout img{
+    padding-top: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+.feed .post-layout .user-and-post{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 2px 3px;
+}
+.feed .post-layout .user-and-post .user-nd-name em{
+    font-size: 0.8rem;
+    transform: translateY(4px);
+}
+.feed .post-layout .user-and-post .user-nd-name{
+    width: 20rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.541);
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+.feed .post-layout .user-and-post .post{
+    color: white;
+}
+/* .alert {
+} */
+
+/* Keep the layout readable on phones and wider screens. */
+*{
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 14px;
+    gap: 12px;
+    background: rgba(0, 0, 8, 0.94);
+    border-bottom: 1px solid rgba(255,255,255,.09);
+}
+#namee{
+    margin-left: auto;
+    max-width: 40%;
+    overflow-wrap: anywhere;
+    font-size: .8rem;
+    color: rgba(255,255,255,.65);
+}
+.link{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-style: normal;
+}
+.navlink{
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 12px;
+    color: white;
+}
+.navlink:hover{
+    background: rgba(73,115,255,.2);
+}
+main{
+    margin: 16px auto;
+    width: min(760px, calc(100% - 24px));
+    padding: 12px;
+    background-color: #10111a;
+    background-image: linear-gradient(rgba(10,11,20,.91), rgba(10,11,20,.91)), url(/images/Background.jpg);
+    border: 1px solid rgba(255,255,255,.1);
+    color: white;
+}
+main .intro{
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,.1);
+}
+main .intro h1{
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+main .intro img{
+    display: block;
+    max-width: 100%;
+    margin-top: 8px;
+}
+main .intro input,
+main .text input,
+main .text textarea,
+main .text #helpcategory{
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin: 8px 0;
+    padding: 10px 12px;
+    border: 1px solid rgba(255,255,255,.24);
+    background: #090a12;
+    color: white;
+}
+main .text textarea{
+    min-height: 130px;
+    height: auto;
+    resize: vertical;
+    border-radius: 12px;
+    font: inherit;
+}
+main .text .inputblock{
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+}
+main .text .send button,
+main .intro button{
+    margin: 12px 0;
+}
+button{
+    flex-shrink: 0;
+}
+.feed{
+    width: min(760px, 100%);
+    min-height: 40vh;
+    height: auto;
+    margin: 0 auto;
+    padding: 8px 12px 28px;
+}
+.feed .post-layout{
+    box-sizing: border-box;
+    max-height: none;
+    min-width: 0;
+    padding: 16px 8px;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,.13);
+}
+.feed .post-layout img{
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,.15);
+}
+.feed .post-layout .user-and-post{
+    min-width: 0;
+    flex: 1;
+    gap: 10px;
+}
+.feed .post-layout .user-and-post .user-nd-name{
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: white;
+}
+.feed .post-layout .user-and-post .user-nd-name h5{
+    overflow-wrap: anywhere;
+}
+.feed .post-layout .user-and-post .user-nd-name em{
+    color: rgba(255,255,255,.48);
+    font-size: .72rem;
+    font-weight: normal;
+    transform: none;
+}
+.feed .post-layout .user-and-post .post{
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    font-family: "Bpmf Huninn", sans-serif;
+}
+.feed .post-layout .user-and-post .post p{
+    margin: 0;
+}
+.feed:empty::after{
+    content: "Nothing here yet. Be the first to talk!";
+    display: block;
+    padding: 48px 12px;
+    text-align: center;
+    color: rgba(255,255,255,.48);
+    font-family: "Bpmf Huninn", sans-serif;
+}
+.alert{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(420px, calc(100% - 32px));
+    min-height: 170px;
+    padding: 22px;
+    gap: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid rgba(255,90,90,.4);
+    border-radius: 18px;
+    background: #11121b;
+    color: #ff7777;
+    box-shadow: 0 18px 70px rgba(0,0,0,.7), 0 0 30px rgba(255,50,50,.12);
+}
+.alert h4{
+    font: 700 1.15rem Arial, sans-serif;
+    letter-spacing: .06em;
+}
+.alert p{
+    color: rgba(255,255,255,.82);
+    font: .95rem/1.5 Arial, sans-serif;
+}
+.alert button{
+    margin-top: 4px;
+}
+.alert button .liquid{
+    background: #b83245;
+}
+@media (max-width: 520px){
+    header{
+        gap: 8px;
+        padding: 7px 9px;
+    }
+    header img{
+        width: 32px;
+        height: 32px;
+    }
+    header span{
+        font-size: 1.1rem;
+    }
+    #namee{
+        font-size: .68rem;
+        max-width: 28%;
+    }
+    .link{
+        gap: 5px;
+    }
+    .navlink{
+        font-size: .68rem !important;
+        padding: 7px 8px;
+    }
+    main{
+        width: calc(100% - 16px);
+        margin: 10px auto;
+        padding: 8px;
+    }
+    .feed{
+        padding: 5px 8px 24px;
+    }
+}
+
+
+/* Keep alerts clear, readable, and usable on small screens. */
+.alert{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    margin: auto;
+    width: min(420px, calc(100% - 32px));
+    height: fit-content;
+    min-height: 150px;
+    box-sizing: border-box;
+    padding: 22px;
+    gap: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid rgba(255, 90, 90, .4);
+    border-radius: 18px;
+    background: #11121b;
+    color: #ff7777;
+    box-shadow: 0 18px 70px rgba(0, 0, 0, .7), 0 0 30px rgba(255, 50, 50, .12);
+}
+.alert h4{
+    font: 700 1.1rem Arial, sans-serif;
+    letter-spacing: .05em;
+}
+.alert p{
+    color: rgba(255, 255, 255, .85);
+    font: .95rem/1.5 Arial, sans-serif;
+    overflow-wrap: anywhere;
+}
+.alert button{
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+.alert button .liquid{
+    background: #b83245;
+}
+@media (max-width: 520px){
+    .alert{
+        width: calc(100% - 28px);
+        padding: 18px;
+    }
+}
